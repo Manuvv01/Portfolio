@@ -23,7 +23,7 @@ function Hero() {
 
         {/* RIGHT: IMAGE */}
         <div className="hero-image">
-          <img src="/images/foto.png" alt="Manuel Vela" />
+          <img src={`${import.meta.env.BASE_URL}images/foto.png`} alt="Manuel Vela" />
         </div>
 
       </div>
