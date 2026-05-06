@@ -22,7 +22,7 @@ function Header() {
 
         {/* Right: CTA Button */}
         <div className="cta">
-          <a href="/CV Manuel Vela.pdf" download className="cta-button">
+          <a href={`${import.meta.env.BASE_URL}CV_Manuel_Vela.pdf`} download className="cta-button">
             Download CV
           </a>
         </div>
