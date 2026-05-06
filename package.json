@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
 
-  "homepage": "https://Manuvv01.github.io/Portfolio",
+  "homepage": "https://manuvv01.github.io/Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
