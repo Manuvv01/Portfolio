@@ -38,7 +38,7 @@ function Footer() {
         <div className="footer-column">
           <h3>Resources</h3>
           <a href="#home">Home</a>
-          <a href="/CV Manuel Vela.pdf" download>Download PDF Resume</a>
+          <a href={`${import.meta.env.BASE_URL}CV_Manuel_Vela.pdf`} download>Download PDF Resume</a>
           <a href="#about">About Me</a>
         </div>
 
