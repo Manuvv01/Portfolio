@@ -1,0 +1,122 @@
+.hero {
+  padding: 4rem 2rem;
+}
+
+.hero-container {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* ================= TEXT ================= */
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+.sub-headline {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* CTA BUTTON */
+.hero-btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: black;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* ================= IMAGE ================= */
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 350px;
+  border-radius: 50%;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    width: 250px;
+    margin-top: 1rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .sub-headline {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+}
+
+.hero-text,
+.hero-image {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* stagger effect */
+.hero-text {
+  animation-delay: 0.15s;
+}
+
+.hero-image {
+  animation-delay: 0.3s;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

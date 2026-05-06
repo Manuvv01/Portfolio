@@ -1,0 +1,208 @@
+.experience {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  border-left: 2px solid var(--accent);
+  padding-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+
+  /* ✅ ANIMATION BASE */
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ⚡ PERFORMANCE BOOST */
+  will-change: transform, opacity;
+}
+
+/* when visible (JS adds .show) */
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* optional stagger effect */
+.timeline-item:nth-child(1) { transition-delay: 0.05s; }
+.timeline-item:nth-child(2) { transition-delay: 0.10s; }
+.timeline-item:nth-child(3) { transition-delay: 0.15s; }
+.timeline-item:nth-child(4) { transition-delay: 0.20s; }
+.timeline-item:nth-child(5) { transition-delay: 0.25s; }
+.timeline-item:nth-child(6) { transition-delay: 0.30s; }
+
+.timeline-dot {
+  position: absolute;
+  left: -27px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.timeline-content span {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  color: #ccc;
+}
+
+/* ================= SKILLS ================= */
+
+.skills {
+  margin-top: 4rem;
+  opacity: 0;
+  transform: translateY(25px);
+  animation: skillsFadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.25s;
+}
+
+.skills-category {
+  margin-bottom: 2rem;
+}
+
+.skills-category h3 {
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags span {
+  background-color: var(--bg-secondary);
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  transition: 0.3s;
+  color: var(--text-secondary);
+}
+
+.tags span:hover {
+  background-color: var(--accent);
+  color: black;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .experience {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .timeline {
+    margin-left: 10px;
+    padding-left: 15px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .experience {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .timeline {
+    margin-left: 5px;
+    padding-left: 12px;
+  }
+
+  .timeline-dot {
+    left: -24px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-content span {
+    font-size: 0.8rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+
+  .tags span {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+/* optional stagger for categories */
+.skills-category {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: skillsItemFade 0.8s ease forwards;
+}
+
+.skills-category:nth-child(2) {
+  animation-delay: 0.35s;
+}
+
+.skills-category:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+.skills-category:nth-child(4) {
+  animation-delay: 0.55s;
+}
+
+@keyframes skillsFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skillsItemFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

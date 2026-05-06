@@ -1,0 +1,18 @@
+:root {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1e1e1e;
+  --accent: #00b894;
+  --accent-hover: #00a383;
+
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
