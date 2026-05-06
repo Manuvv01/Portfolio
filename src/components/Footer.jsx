@@ -19,16 +19,16 @@ function Footer() {
         <div className="footer-column">
           <h3>Connect</h3>
           <a href="https://www.linkedin.com/in/manuel-vela-34a854317/" target="_blank" rel="noopener noreferrer">
-          <img src="/icons/linkedin.png" alt="linkedin" className="footer-icon" />
+          <img src={`${import.meta.env.BASE_URL}/icons/linkedin.png`} alt="linkedin" className="footer-icon" />
             /in/manuel-vela
           </a>
           <a href="https://github.com/Manuvv01" target="_blank" rel="noopener noreferrer">
-          <img src="/icons/github.png" alt="github" className="footer-icon" />
+          <img src={`${import.meta.env.BASE_URL}/icons/github.png`} alt="github" className="footer-icon" />
             /Manuvv01
           </a>
           
           <a href="mailto:manuvvela@gmail.com">
-          <img src="/icons/communication.png" alt="email" className="footer-icon" />
+          <img src={`${import.meta.env.BASE_URL}/icons/communication.png`} alt="email" className="footer-icon" />
             manuvvela@gmail.com
           </a>
 
