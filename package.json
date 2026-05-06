@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+
+  "homepage": "https://Manuvv01.github.io/Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.2.5",
@@ -25,4 +28,7 @@
     "globals": "^17.5.0",
     "vite": "^8.0.10"
   }
+  
 }
+
+
